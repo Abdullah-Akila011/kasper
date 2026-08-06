@@ -1,0 +1,120 @@
+/* Start variable */
+:root {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    --main-color: #19c8fa;
+}
+/* End variable */
+/* Start Global Rules */
+@font-face {
+    font-family: "open-sans";
+    src: url(../font/open-sans/OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(../font/open-sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf) format(i);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "open-sans";
+    text-transform: capitalize;
+    background-color: black;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Larg */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header img[alt="logo"] {
+    height: 40px;
+}
+header .container::after {
+content: "";
+position: absolute;
+background-color: #a2a2a2a2;
+height: 5px;
+bottom: 0;
+width: calc(100% - 30px);
+left: 15px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul a {
+    position: relative;
+    z-index: 2;
+    padding: 40px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+header nav ul a.active,
+header nav ul a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+header form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+header i {
+    color: white;
+}
+
+/* End Header */
